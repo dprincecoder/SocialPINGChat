@@ -16,7 +16,7 @@ const server = http.createServer(app);
 const io = socketio(server);
 
 // Set static folder
-// app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 const botName = "SocialPing Bot";
 
@@ -72,7 +72,7 @@ io.on("connection", (socket) => {
 });
 
 app.get("/", (req, res) => {
-  res.send(express.static(path.join(__dirname, "public")));
+  // res.send(express.static(path.join(__dirname, "public")));
 });
 
 const PORT = process.env.PORT || 3000;
