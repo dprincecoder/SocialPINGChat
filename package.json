@@ -1,0 +1,23 @@
+{
+  "name": "chatcord",
+  "version": "1.0.0",
+  "description": "Realtime chat app with rooms",
+  "main": "server.js",
+  "scripts": {
+    "start": "./node_modules/.bin/netlify-lambda serve server.js",
+    "build": "./node_modules/.bin/netlify-lambda build server.js",
+    "dev": "nodemon server"
+  },
+  "author": "Brad Traversy",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "moment": "^2.24.0",
+    "netlify-lambda": "^2.0.15",
+    "serverless-http": "^3.0.1",
+    "socket.io": "^2.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
