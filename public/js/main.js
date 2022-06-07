@@ -87,7 +87,8 @@ function botMessage(msg) {
 
 // Output message to DOM
 function outputMessage(message) {
-  message.map((msg) => {
+  if(message.length > 0){
+    message.map((msg) => {
     const div = document.createElement("div");
     div.classList.add("message");
     const p = document.createElement("p");
@@ -101,6 +102,8 @@ function outputMessage(message) {
     div.appendChild(para);
     document.querySelector(".all-message").appendChild(div);
   });
+  }else return;
+  
 }
 
 // Add room name to DOM
